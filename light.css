@@ -1,0 +1,27 @@
+body
+{
+    background-color: ivory;
+}
+.container {
+    color: #930; /* Цвет текста */
+}
+
+input[type=submit] {
+    background-color: khaki;
+}
+input[type=submit]:hover {
+    background-color: burlywood;
+}
+
+.form-input {
+
+    color: #930; /* Цвет текста */
+}
+INPUT[type="text"] {
+    background-color: khaki; /* Цвет фона */
+    color: #930; /* Цвет текста */
+}
+INPUT[type="password"] {
+    background-color: khaki; /* Цвет фона */
+    color: #930; /* Цвет текста */
+}
