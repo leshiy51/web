@@ -1,0 +1,114 @@
+body
+{
+    background-color: ivory;
+}
+
+.container {
+    color: #930; /* Цвет текста */
+}
+
+input[type=submit] {
+    background-color: khaki;
+}
+input[type=submit]:hover {
+    background-color: burlywood;
+}
+
+.form-input {
+    color: #930; /* Цвет текста */
+}
+
+INPUT[type="text"] {
+    background-color: khaki; /* Цвет фона */
+    color: #930; /* Цвет текста */
+}
+
+INPUT[type="password"] {
+    background-color: khaki; /* Цвет фона */
+    color: #930; /* Цвет текста */
+}
+
+select {
+    color: #930;
+    background-color: khaki;
+    cursor: pointer;
+}
+
+.form__error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+    display: none;
+}
+
+.form input {
+    outline: none;
+    display: block;
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: green;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+input:invalid:not(:placeholder-shown) + .form__error {
+    display: block;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #887fe4;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: aliceblue ;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: darkgoldenrod;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" type="text/css" href="light.css" id="theme-link">
+</head>
+<body>
+<label class="switch">
+    <input type="checkbox" id="theme-button">
+    <span class="slider round"></span>
+</label>
+<div class="container">
+    <h1>Registration form</h1>
+    <form action="/reg-data" method="post" class="form">
+    <div class="form-input">
+        <label for="login-input">Enter your login</label>
+        <input id="login-input"
+               type="text"
+               placeholder="Login"
+               minlength="1"
+               pattern="[A-Za-z0-9]{1,}"
+               required
+               name = "login"/>
+        <span class="form__error">Required field</span>
+    </div>
+    <div class="form-input">
+        <label for="pass-input">Enter your password</label>
+        <input id="pass-input"
+               type="password"
+               placeholder="Password"
+               minlength="8"
+               required
+               name = "password"/>
+        <span class="form__error">Password must contain at least 8 characters</span>
+    </div>
+    <div class="form-input">
+        <label for="country-input">Country</label>
+        <select id="country-input" name="country">
+            <option value="-"> - </option>
+            <option value="russia"> Russia </option>
+            <option value="other"> Other </option>
+        </select>
+    </div>
+        <input type="submit" value="Register"/>
+</form>
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
