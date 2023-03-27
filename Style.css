@@ -1,5 +1,3 @@
-
-
 .container {
     width: 100%;
     hight: 100%;
@@ -8,6 +6,7 @@
     align-items: center;
     justify-content: center;
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -15,20 +14,22 @@ form {
     justify-content: center;
     gap: 15px;
 }
+
 .form-input {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 input[type=submit] {
-    width: 100%;
+    width: 200px;
     height: 30px;
 }
+
 input[type=submit]:hover {
     cursor: pointer;
 }
-
 
 /* The switch - the box around the slider */
 .switch {
@@ -49,7 +50,7 @@ input[type=submit]:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: darkgoldenrod;
+    background-color: #887fe4;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -67,7 +68,7 @@ input[type=submit]:hover {
 }
 
 input:checked + .slider {
-    background-color: #887fe4;
+    background-color: darkgoldenrod;
 }
 
 input:checked + .slider:before {

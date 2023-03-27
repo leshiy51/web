@@ -2,6 +2,7 @@ body
 {
     background-color: #333;
 }
+
 .container {
     color: #887fe4; /* Цвет текста */
 }
@@ -19,11 +20,44 @@ input[type=submit]:hover {
 
     color: #887fe4; /* Цвет текста */
 }
+
 INPUT[type="text"] {
     background-color: lightgrey; /* Цвет фона */
-    color: #887fe4; /* Цвет текста */
+    color: darkblue; /* Цвет текста */
 }
+
 INPUT[type="password"] {
     background-color: lightgrey; /* Цвет фона */
-    color: #887fe4; /* Цвет текста */
+    color: darkblue; /* Цвет текста */
 }
+
+select {
+    color: darkblue;
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.form__error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+    display: none;
+}
+
+.form input {
+    outline: none;
+    display: block;
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: green;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+input:invalid:not(:placeholder-shown) + .form__error {
+    display: block;
+}
+

@@ -12,54 +12,42 @@
     <span class="slider round"></span>
 </label>
 <div class="container">
-
     <h1>Registration form</h1>
-
-<form>
+    <form action="#" class="form">
     <div class="form-input">
         <label for="login-input">Enter your login</label>
-        <input type="text" id="login-input" placeholder="Login" />
+        <input id="login-input"
+               type="text"
+               placeholder="Login"
+               minlength="1"
+               pattern="[A-Za-z0-9]{1,}"
+               required
+               name = "login"/>
+        <span class="form__error">Required field</span>
     </div>
     <div class="form-input">
-        <label for="mail-input">Enter your mail</label>
-        <input type="text" id="mail-input" placeholder="Mail" />
+        <label for="pass-input">Enter your password</label>
+        <input id="pass-input"
+               type="password"
+               placeholder="Password"
+               minlength="8"
+               required
+               name = "password"/>
+        <span class="form__error">Password must contain at least 8 characters</span>
     </div>
     <div class="form-input">
-        <label for="password-input">Enter your password</label>
-        <input type="password" id="password-input" placeholder="Password"/>
+        <label for="country-input">Country</label>
+        <select id="country-input" name="select_country">
+            <option value="-"> - </option>
+            <option value="russia"> Russia </option>
+            <option value="other"> Other </option>
+        </select>
     </div>
         <input type="submit" value="Register"/>
 </form>
 </div>
-<script>
-    var btn = document.getElementById("theme-button");
-    var link = document.getElementById("theme-link");
 
-    btn.addEventListener("click", function () { ChangeTheme(); });
+<script type="text/javascript" src="script.js"></script>
 
-    function ChangeTheme()
-    {
-        let lightTheme = "light.css";
-        let darkTheme = "dark.css";
-
-        var currTheme = link.getAttribute("href");
-        var theme = "";
-
-        if(currTheme == lightTheme)
-        {
-            currTheme = darkTheme;
-            theme = "dark";
-        }
-        else
-        {
-            currTheme = lightTheme;
-            theme = "light";
-        }
-
-        link.setAttribute("href", currTheme);
-
-        Save(theme);
-    }
-</script>
 </body>
 </html>
